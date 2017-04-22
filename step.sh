@@ -11,6 +11,7 @@ then
   wget https://raw.githubusercontent.com/dotnet/cli/master/scripts/obtain/dotnet-install.sh
   chmod +x dotnet-install.sh
   ./dotnet-install.sh
+  ln -s /usr/local/share/dotnet/dotnet /usr/local/bin/
   dotnet --version
 fi
 
