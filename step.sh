@@ -11,9 +11,9 @@ then
   wget https://raw.githubusercontent.com/dotnet/cli/master/scripts/obtain/dotnet-install.sh
   chmod +x dotnet-install.sh
   ./dotnet-install.sh --verbose
-  
+  $PATH
   /Users/vagrant/.dotnet/dotnet --version
-  $PATH:/Users/vagrant/.dotnet
+  $PATH:/Users/vagrant/.dotnet/
   dotnet --version
 
   find $HOME/.dotnet -name "dotnet"
