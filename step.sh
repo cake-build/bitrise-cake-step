@@ -13,17 +13,15 @@ then
   ./dotnet-install.sh 
   
   /Users/vagrant/.dotnet/dotnet --version
-  
-
-  say "Adding to PATH:"
-  export PATH=/Users/vagrant/.dotnet/dotnet:$PATH
-
-  ln -s $HOME/.dotnet/ /usr/local/bin/
-  
-  dotnet --version
-  
   /usr/local/bin/dotnet --version
 
+  ln -s $HOME/.dotnet/ /usr/local/bin/
+  /usr/local/bin/dotnet --version
+
+  export PATH=/Users/vagrant/.dotnet/dotnet:$PATH
+  dotnet --version
+
+  
   #find $HOME/.dotnet -name "dotnet"
 
 fi
