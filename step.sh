@@ -8,17 +8,23 @@ then
   mkdir -p /usr/local/lib
   ln -s /usr/local/opt/openssl/lib/libcrypto.1.0.0.dylib /usr/local/lib/
   ln -s /usr/local/opt/openssl/lib/libssl.1.0.0.dylib /usr/local/lib/
-  wget https://raw.githubusercontent.com/dotnet/cli/master/scripts/obtain/dotnet-install.sh
+  wget https://raw.githubusercontent.com/dotnet/cli/rel/1.0.1/scripts/obtain/dotnet-install.sh
   chmod +x dotnet-install.sh
   ./dotnet-install.sh 
   
   /Users/vagrant/.dotnet/dotnet --version
   
+
+  say "Adding to PATH:"
+  export PATH=/Users/vagrant/.dotnet/dotnet:$PATH
+
   ln -s $HOME/.dotnet/ /usr/local/bin/
   
   dotnet --version
+  
+  /usr/local/bin/dotnet --version
 
-  find $HOME/.dotnet -name "dotnet"
+  #find $HOME/.dotnet -name "dotnet"
 
 fi
 
