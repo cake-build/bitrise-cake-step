@@ -13,7 +13,7 @@ then
   ./dotnet-install.sh --verbose
   
   /Users/vagrant/.dotnet/dotnet --version
-  $PATH:/Users/vagrant/.dotnet/dotnet
+  $PATH:/Users/vagrant/.dotnet
   dotnet --version
 
   find $HOME/.dotnet -name "dotnet"
