@@ -15,10 +15,12 @@ then
   brew tap caskroom/cask
   brew cask install dotnet
 
-  find $HOME -name "dotnet"
+  find /usr -name "dotnet"
 
-  $HOME/.dotnet/dotnet --version
-  export PATH=/$HOME/.dotnet:$PATH
+  /usr/local/share/dotnet/dotnet --version
+  export PATH=/usr/local/share/dotnet:$PATH
+
+  ln -s /usr/local/share/dotnet/dotnet /usr/local/bin/
   dotnet --version
 
   
