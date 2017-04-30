@@ -6,7 +6,7 @@ Task("Default")
 
 
 
-  DotNetCoreRestore("./SampleNetStandardLibraryProject/SampleNetStandardLibraryProject.sln");
+  DotNetCoreRestore("./SampleNetStandardLibraryProject/SampleNetStandardLibraryProject.sln", new  new DotNetCoreRestoreSettings() { DisableParallel = true, Verbosity = Diagnostics});
   DotNetCoreBuild("./SampleNetStandardLibraryProject/SampleNetStandardLibraryProject.sln", new DotNetCoreBuildSettings() { Configuration = "Debug" });
 });
 
