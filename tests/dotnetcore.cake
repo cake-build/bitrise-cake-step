@@ -6,7 +6,7 @@ Task("Default")
 
 
 
-  DotNetCoreRestore("./SampleNetStandardLibraryProject/SampleNetStandardLibraryProject.sln", new DotNetCoreRestoreSettings() { DisableParallel = true, NoCache = true, Verbose = true });
+  DotNetCoreRestore("./SampleNetStandardLibraryProject/SampleNetStandardLibraryProject.sln", new DotNetCoreRestoreSettings() { DisableParallel = true, NoCache = true });
   DotNetCoreBuild("./SampleNetStandardLibraryProject/SampleNetStandardLibraryProject.sln", new DotNetCoreBuildSettings() { Configuration = "Debug" });
 });
 
