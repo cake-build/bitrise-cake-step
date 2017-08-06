@@ -23,7 +23,7 @@ then
 fi
 
 echo "Installing Cake bootstrapper"
-curl -Lsfo build.sh http://cakebuild.net/download/bootstrapper/osx
+curl -Lsfo build.sh https://cakebuild.net/download/bootstrapper/osx
 
 echo "Executing Cake"
 chmod +x build.sh
