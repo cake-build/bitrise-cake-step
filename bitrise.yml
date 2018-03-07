@@ -10,7 +10,7 @@ workflows:
   test:
     steps:
     - change-workdir:
-        title: Switch working dir to test / _tmp dir
+        title: Switch working dir to test / tests dir
         description: |-
           To prevent step testing issues, like referencing relative
           files with just './some-file' in the step's code, which would
@@ -18,7 +18,7 @@ workflows:
           but would break if the step is included in another `bitrise.yml`.
         run_if: true
         inputs:
-        - path: ./_tmp
+        - path: ./tests
         - is_create_path: true
     - path::./:
         title: Cake Build
@@ -27,10 +27,9 @@ workflows:
         run_if: true
         inputs:
         - script: build.cake
-        - dotnetcore: "yes"
         - target: Default
         - configuration: Release
-        - verbosity: normal
+        - verbosity: diagnostic
 
 
   # ----------------------------------------------------------------
@@ -49,7 +48,7 @@ workflows:
       # if you want to share this step into a StepLib
       - MY_STEPLIB_REPO_FORK_GIT_URL: https://github.com/cake-build/bitrise-steplib.git
       - STEP_ID_IN_STEPLIB: cakebuild
-      - STEP_GIT_VERION_TAG_TO_SHARE: 1.0.3
+      - STEP_GIT_VERION_TAG_TO_SHARE: 1.0.4
       - STEP_GIT_CLONE_URL: https://github.com/cake-build/bitrise-cake-step.git
     description: |-
       If this is the first time you try to share a Step you should

@@ -6,4 +6,11 @@ Task("Default")
   DotNetBuild("./SampleLibraryProject/SampleLibraryProject.sln");
 });
 
+Task("Test")
+  .Does(() =>
+{
+  Information("Hello World!");
+});
+
+
 RunTarget(target);

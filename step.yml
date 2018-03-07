@@ -24,16 +24,6 @@ inputs:
         Name of the script to execute. Default is build.cake
       is_expand: true
       is_required: true
-  - dotnetcore: "no"
-    opts:
-      title: ".NET Core Needed?"
-      description: |
-        Is the project a .NET Core project? Default is no.
-      is_expand: true
-      is_required: true
-      value_options:
-      - "yes"
-      - "no"
   - target: Default
     opts:
       title: "Target"
