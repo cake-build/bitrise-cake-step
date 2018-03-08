@@ -51,3 +51,27 @@ inputs:
       - normal
       - verbose
       - diagnostic
+  - nuget_source_name:
+    opts:
+      title: "NuGet private source name"
+      summary: ""
+      description: |
+        Name to use for specified NuGet private source in the NuGet source list.
+  - nuget_source_path_or_url:
+    opts:
+      title: "NuGet private source path / url"
+      summary: ""
+      description: |
+        Path or URL of the NuGet private package(s) source.
+  - nuget_source_username:
+    opts:
+      title: "NuGet private source username"
+      summary: ""
+      description: |
+        UserName to be used when connecting to an authenticated source.
+  - nuget_source_password:
+    opts:
+      title: "NuGet private source password"
+      summary: ""
+      description: |
+        Password to be used when connecting to an authenticated source.
