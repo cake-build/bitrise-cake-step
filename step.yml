@@ -23,28 +23,28 @@ inputs:
       description: |
         Name of the script to execute. Default is build.cake
       is_expand: true
-      is_required: false
+      is_required: true
   - target:
     opts:
       title: "Target"
       description: |
         Target name to execute. Default is Default
       is_expand: true
-      is_required: false
+      is_required: true
   - configuration:
     opts:
       title: "Configuration"
       description: |
         Configuration to build. Default is Release.
       is_expand: true
-      is_required: false
+      is_required: true
   - verbosity:
     opts:
       title: "Verbosity"
       description: |
         Specifies the amount of information to be displayed (quiet, minimal, normal, verbose, diagnostic).
       is_expand: true
-      is_required: false
+      is_required: true
       value_options:
       - quiet
       - minimal
