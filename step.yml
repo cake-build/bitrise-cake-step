@@ -17,40 +17,47 @@ is_requires_admin_user: false
 is_always_run: false
 is_skippable: false
 inputs:
-  - script: build.cake
+  - script:
     opts:
       title: "Script"
       description: |
         Name of the script to execute. Default is build.cake
       is_expand: true
-      is_required: true
-  - target: Default
+      is_required: false
+  - target:
     opts:
       title: "Target"
       description: |
         Target name to execute. Default is Default
       is_expand: true
-      is_required: true
-  - configuration: Release
+      is_required: false
+  - configuration:
     opts:
       title: "Configuration"
       description: |
         Configuration to build. Default is Release.
       is_expand: true
-      is_required: true
-  - verbosity: normal
+      is_required: false
+  - verbosity:
     opts:
       title: "Verbosity"
       description: |
         Specifies the amount of information to be displayed (quiet, minimal, normal, verbose, diagnostic).
       is_expand: true
-      is_required: true
+      is_required: false
       value_options:
       - quiet
       - minimal
       - normal
       - verbose
       - diagnostic
+  - custom_args:
+    opts:
+      title: "Custom arguments"
+      description: |
+        Custom arguments to add to the build script
+      is_expand: true
+      is_required: false
   - nuget_source_name:
     opts:
       title: "NuGet private source name"
