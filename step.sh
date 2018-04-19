@@ -45,4 +45,4 @@ fi
 
 echo "Executing Cake Script with arguments ${script_args}"
 chmod +x build.sh
-./build.sh "$script_args"
+./build.sh $script_args
